@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Events</title>
+<link rel="stylesheet" media="screen" href="../lib/jquery-ui/jquery-ui-1.10.2.custom.min.css" />
+<link rel="stylesheet" media="screen" href="../lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.css" />
+<link rel="stylesheet" media="screen" href="events.css" />
+<script type="text/javascript" src="Modernizr-latest.js"></script>
+<script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../lib/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
+<script type="text/javascript" src="../lib/jQuery-Timepicker-Addon/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="../lib/jQuery-Timepicker-Addon/jquery-ui-sliderAccess.js"></script>
+<script type="text/javascript" src="../lib/jsdebug/debug.js"></script>
+<script type="text/javascript" src="../lib/jsdebug/assert.js"></script>
+<script type="text/javascript" src="../lib/js-lib/textarea.js"></script>
+<script type="text/javascript" src="../lib/js-lib/dates.js"></script>
+<script type="text/javascript" src="events.js"></script>
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+
+<h1>Events</h1>
+
+<button id="addEvent">Add new</button>
+<button id="editEvent">Edit</button>
+<button id="deleteEvent">Delete</button>
+<button id="showJSON">Show JSON</button>
+<button id="editJSON">Edit JSON</button>
+
+<br class="clearfloat" />
+
+<table class="eventList zebra">
+<caption>Event List</caption>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Time Remaining</th>
+  </tr>
+</thead>
+<tfoot>
+  <tr>
+    <th>Name</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Time Remaining</th>
+  </tr>
+</tfoot>
+<tbody id="events"></tbody>
+</table>
+
+<table>
+<caption>Gantt Chart</caption>
+<tbody id="ganttChart"></tbody>
+</table>
+
+<div id="eventDialog" class="dialog">
+  <fieldset id="eventForm">
+    <legend>Event details</legend>
+    <fieldset>
+      <legend>Event Name</legend>
+      <input id="eventName" type="text" size="40" />
+    </fieldset>
+    <fieldset>
+      <legend>Start Time</legend>
+      <input id="startDate" type="datetime" placeholder="YYYY-MM-DD HH:MM:SS +Z" size="35" />
+    </fieldset>
+    <fieldset>
+      <legend>End Time</legend>
+      <input id="endDate" type="datetime" placeholder="YYYY-MM-DD HH:MM:SS +Z" size="35" />
+    </fieldset>
+  </fieldset>
+</div>
+
+<div id="jsonDialog" class="dialog" title="JSON">
+  <textarea id="jsonDisplay"></textarea>
+</div>
+
+</body>
+</html>
